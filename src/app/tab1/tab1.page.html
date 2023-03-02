@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="secondary">
+  <ion-toolbar color="dark">
     <ion-title>
       Cara ou Coroa
     </ion-title>
@@ -7,15 +7,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
- <div>
-   <img src="assets/logo.png" alt="">
-   <h1>Clique no botão  para jogar!</h1>
+ <div class="container-coin">
+   <img [src]="image" alt="">
+   <h1>{{info}}</h1>
  </div>
-
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="secondary">
-    <ion-title>Jogar a moeda!</ion-title>
+  <ion-toolbar class="btn" color="dark">
+    <ion-title class="ion-text-center">Jogar a moeda!</ion-title>
   </ion-toolbar>
 </ion-footer>
