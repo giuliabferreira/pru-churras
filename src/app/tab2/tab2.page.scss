@@ -1,0 +1,23 @@
+.texto {
+  text-align: center;
+}
+
+.numeros {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.partidas {
+  text-align: left;
+  display: flex;
+  flex-flow: column;
+
+}
+
+.resultado {
+  text-align: right;
+  display: flex;
+}
