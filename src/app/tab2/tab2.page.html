@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
       Marcador de Truco
     </ion-title>
@@ -10,7 +10,7 @@
 
   <br>
 
-  <ion-title class="ion-text-center"><h2>{{valendo}}</h2></ion-title>
+  <ion-title class="ion-text-center"><h2>Valendo: {{valendo}}</h2></ion-title>
 
   <br>
 
@@ -18,15 +18,15 @@
     <ion-grid>
       <ion-row>
         <ion-col></ion-col>
-        <ion-col><ion-button expand="block" fill="outline" color="dark">1</ion-button></ion-col>
+        <ion-col><ion-button expand="block" fill="outline" color="dark" (click)="mudarvalendo1()">1</ion-button></ion-col>
         <ion-col></ion-col>
-        <ion-col><ion-button expand="block" fill="outline" color="dark">3</ion-button></ion-col>
+        <ion-col><ion-button expand="block" fill="outline" color="dark" (click)="mudarvalendo3()">3</ion-button></ion-col>
         <ion-col></ion-col>
-        <ion-col><ion-button expand="block"fill="outline" color="dark">6</ion-button></ion-col>
+        <ion-col><ion-button expand="block"fill="outline" color="dark" (click)="mudarvalendo6()">6</ion-button></ion-col>
         <ion-col></ion-col>
-        <ion-col><ion-button expand="block" fill="outline" color="dark">9</ion-button></ion-col>
+        <ion-col><ion-button expand="block" fill="outline" color="dark" (click)="mudarvalendo9()">9</ion-button></ion-col>
         <ion-col></ion-col>
-        <ion-col><ion-button expand="block" fill="outline" color="dark">12</ion-button></ion-col>
+        <ion-col><ion-button expand="block" fill="outline" color="dark" (click)="mudarvalendo12()">12</ion-button></ion-col>
         <ion-col></ion-col>
       </ion-row>
     </ion-grid>
@@ -37,23 +37,10 @@
     <ion-grid>
       <ion-row>
         <ion-col></ion-col>
-        <ion-col>TIME 1<ion-button expand="block" color="dark">+</ion-button></ion-col>
+        <ion-col>TIME 1<ion-button expand="block" color="dark" (click)="aumentartime1()">+</ion-button></ion-col>
         <ion-col></ion-col>
         <ion-col></ion-col>
-        <ion-col>TIME 2<ion-button expand="block" color="dark">+</ion-button></ion-col>
-        <ion-col></ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <br>
-
-    <ion-grid>
-      <ion-row>
-        <ion-col></ion-col>
-        <ion-button fill="clear" color="dark">0</ion-button>
-        <ion-col></ion-col>
-        <ion-col></ion-col>
-        <ion-button fill="clear" color="dark">0</ion-button>
+        <ion-col>TIME 2<ion-button expand="block" color="dark" (click)="aumentartime2()">+</ion-button></ion-col>
         <ion-col></ion-col>
       </ion-row>
     </ion-grid>
@@ -63,10 +50,23 @@
     <ion-grid>
       <ion-row>
         <ion-col></ion-col>
-        <ion-col>TIME 1<ion-button expand="block" color="dark">-</ion-button></ion-col>
+        <ion-button fill="clear" color="dark">{{pontostime1}}</ion-button>
         <ion-col></ion-col>
         <ion-col></ion-col>
-        <ion-col>TIME 2<ion-button expand="block" color="dark">-</ion-button></ion-col>
+        <ion-button fill="clear" color="dark">{{pontostime2}}</ion-button>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <br>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>TIME 1<ion-button expand="block" color="dark" (click)="diminuirtime1()">-</ion-button></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col>TIME 2<ion-button expand="block" color="dark" (click)="diminuirtime2()">-</ion-button></ion-col>
         <ion-col></ion-col>
       </ion-row>
     </ion-grid>
@@ -74,24 +74,24 @@
   <br>
 
   <div class="texto">
-    <h2>Partidas</h2>
+    <h2>Vitórias</h2>
   </div>
 
   <div class="partidas">
     <ion-card>
       <ion-card-content>
-        <h2>TIME 1</h2>
+        <h2>TIME 1</h2><h2 id="direita">{{vitoriastime1}}</h2>
 
         <br>
         <br>
 
-        <h2>TIME 2</h2>
+        <h2>TIME 2</h2><h2 id="direita">{{vitoriastime2}}</h2>
       </ion-card-content>
     </ion-card>
   </div>
 
   <br>
 
-  <ion-button expand="full" color="dark">Limpar</ion-button>
+  <ion-button expand="full" color="dark" (click)="limpartudo()">Limpar</ion-button>
 
 </ion-content>
