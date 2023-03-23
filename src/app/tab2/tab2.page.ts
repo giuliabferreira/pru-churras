@@ -6,6 +6,7 @@ import { threadId } from 'worker_threads';
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
+
 export class Tab2Page {
 
   valendo = 1;
@@ -17,7 +18,6 @@ export class Tab2Page {
 
 
   constructor() {}
-
 
   mudarvalendo1() {
     this.valendo = 1;
